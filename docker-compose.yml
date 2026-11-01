@@ -1,0 +1,20 @@
+name: antigravity-to-api-docker
+
+services:
+  agy-api:
+    build:
+      context: .
+    image: antigravity-to-api-docker
+    container_name: antigravity-to-api-docker
+    ports:
+      - "127.0.0.1:8788:8788"
+    environment:
+      AGY_API_KEY: ${AGY_API_KEY:-}
+    volumes:
+      - agy-login:/home/node/.gemini
+      - agy-memory:/app/memory
+    restart: unless-stopped
+
+volumes:
+  agy-login:
+  agy-memory:

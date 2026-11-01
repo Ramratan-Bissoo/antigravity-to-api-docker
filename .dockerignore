@@ -1,0 +1,10 @@
+.git
+.env
+.env.*
+memory
+node_modules
+*.log
+agy
+assets
+*.md
+*.postman_collection.json

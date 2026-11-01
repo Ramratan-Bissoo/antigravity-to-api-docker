@@ -1,0 +1,15 @@
+{
+  "name": "antigravity-to-api-docker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local OpenAI-compatible API bridge for the installed AGY CLI",
+  "type": "module",
+  "scripts": {
+    "start": "node api-server.mjs",
+    "memory:mcp": "node memory-mcp-server.mjs",
+    "check": "node --check env-loader.mjs && node --check api-server.mjs && node --check memory-db.mjs && node --check memory-mcp-server.mjs"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}
