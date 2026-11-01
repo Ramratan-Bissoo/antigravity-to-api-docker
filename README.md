@@ -24,26 +24,28 @@ Requires [Docker Desktop](https://www.docker.com/products/docker-desktop/). The 
 ```bash
 # 1. Build and start
 docker compose up -d --build
-
+```
 <p align="center">
   <img src="assets/Docker-desktop.jpg" alt="Docker-desktop" width="100%" />
 </p>
 
+```bash
 # 2. Sign in to AGY once (follow the prompts)
 docker exec -it antigravity-to-api-docker agy
-
+```
 <p align="center">
   <img src="assets/Antigravity-cli-login.jpg" alt="Antigravity-cli-login" width="100%" />
 </p>
 
+```bash
 # 3. Check it works
 curl http://127.0.0.1:8788/v1/models
-
+```
 
 <p align="center">
   <img src="assets/postman-access-api.jpg" alt="postman-access-api" width="100%" />
 </p>
-```
+
 
 - The AGY login and the archive are kept in Docker volumes (`agy-login`, `agy-memory`), so they survive restarts and rebuilds.
 - The API is published on `127.0.0.1:8788` only.
